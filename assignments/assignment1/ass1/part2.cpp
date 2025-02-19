@@ -153,7 +153,7 @@ public:
 void minerThread(Blockchain& blockchain, int minerId, int numBlocks) {
     random_device rd;
     mt19937 gen(rd());
-    uniform_int_distribution<> dis(500, 750); // Random delay between 100-500ms
+    uniform_int_distribution<> dis(500, 750); // Random delay between 500-750ms
 
     for (int i = 1; i <= numBlocks; i++) {
         string tx1 = "Miner" + to_string(minerId) + "_Tx1_" + to_string(i);
